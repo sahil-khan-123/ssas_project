@@ -107,18 +107,19 @@
             "name": "Hours",
             "dataType": "double",
             "sourceColumn": "Hours",
+            "formatString": "0.00",
             "sourceProviderType": "Double"
           },
           {
             "name": "Pay Rate",
             "dataType": "decimal",
             "sourceColumn": "Pay Rate",
-            "formatString": "\"₹\" #,0.00;#,0.00 -\"₹\";\"₹\" #,0.00",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
             "sourceProviderType": "Currency",
             "annotations": [
               {
                 "name": "Format",
-                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"16393\" DisplayName=\"₹ English (India)\" Symbol=\"₹\" PositivePattern=\"2\" NegativePattern=\"12\" /></Format>"
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
               }
             ]
           },
