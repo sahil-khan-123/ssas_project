@@ -1,0 +1,185 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-IN",
+    "dataSources": [
+      {
+        "name": "SqlServer RSPL-306 PayLocity_Data",
+        "connectionString": "Provider=SQLNCLI11;Data Source=RSPL-306;Initial Catalog=PayLocity_Data;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateAccount",
+        "account": "AD\\sahil.khan",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "PayLocity",
+        "columns": [
+          {
+            "name": "EmployeeID",
+            "dataType": "string",
+            "sourceColumn": "EmployeeID",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "First Name",
+            "dataType": "string",
+            "sourceColumn": "First Name",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Middle Name",
+            "dataType": "string",
+            "sourceColumn": "Middle Name",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Last Name",
+            "dataType": "string",
+            "sourceColumn": "Last Name",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Department",
+            "dataType": "string",
+            "sourceColumn": "Department",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Labour Level Code 3",
+            "dataType": "int64",
+            "sourceColumn": "Labour Level Code 3",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Labour Level Code 3 Description",
+            "dataType": "string",
+            "sourceColumn": "Labour Level Code 3 Description",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Pay Type",
+            "dataType": "string",
+            "sourceColumn": "Pay Type",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Pay Description",
+            "dataType": "string",
+            "sourceColumn": "Pay Description",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "Time In",
+            "dataType": "dateTime",
+            "sourceColumn": "Time In",
+            "formatString": "General Date",
+            "sourceProviderType": "145"
+          },
+          {
+            "name": "Time Out",
+            "dataType": "dateTime",
+            "sourceColumn": "Time Out",
+            "formatString": "General Date",
+            "sourceProviderType": "145"
+          },
+          {
+            "name": "Effective Hours",
+            "dataType": "dateTime",
+            "sourceColumn": "Effective Hours",
+            "formatString": "General Date",
+            "sourceProviderType": "145"
+          },
+          {
+            "name": "Hours",
+            "dataType": "double",
+            "sourceColumn": "Hours",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Pay Rate",
+            "dataType": "decimal",
+            "sourceColumn": "Pay Rate",
+            "formatString": "\"₹\" #,0.00;#,0.00 -\"₹\";\"₹\" #,0.00",
+            "sourceProviderType": "Currency",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"16393\" DisplayName=\"₹ English (India)\" Symbol=\"₹\" PositivePattern=\"2\" NegativePattern=\"12\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Labour Level Code 1",
+            "dataType": "string",
+            "sourceColumn": "Labour Level Code 1",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Labour Level Code 1 Description",
+            "dataType": "string",
+            "sourceColumn": "Labour Level Code 1 Description",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Labour Level Code 2",
+            "dataType": "int64",
+            "sourceColumn": "Labour Level Code 2",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Labour Level Code 2 Description",
+            "dataType": "string",
+            "sourceColumn": "Labour Level Code 2 Description",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "PayLocity",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[PayLocity].* FROM [dbo].[PayLocity] ",
+              "dataSource": "SqlServer RSPL-306 PayLocity_Data"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[PayLocity].* FROM [dbo].[PayLocity] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "PayLocity"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
