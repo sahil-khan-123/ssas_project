@@ -106,8 +106,14 @@
             "name": "Effective Hours",
             "dataType": "dateTime",
             "sourceColumn": "Effective Hours",
-            "formatString": "General Date",
-            "sourceProviderType": "145"
+            "formatString": "HH:mm:ss",
+            "sourceProviderType": "145",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeCustom\"><DateTimes><DateTime LCID=\"16393\" Group=\"LongTime\" FormatString=\"HH:mm:ss\" /></DateTimes></Format>"
+              }
+            ]
           },
           {
             "name": "Hours",
