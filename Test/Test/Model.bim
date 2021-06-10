@@ -145,6 +145,13 @@
             "dataType": "string",
             "sourceColumn": "Labour Level Code 2 Description",
             "sourceProviderType": "WChar"
+          },
+          {
+            "type": "calculated",
+            "name": "Full Name",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF(PayLocity[Middle Name]=BLANK(), PayLocity[First Name] & \" \" & PayLocity[Last Name], PayLocity[First Name] & \" \" & PayLocity[Middle Name] & \" \" & PayLocity[Last Name])"
           }
         ],
         "partitions": [
