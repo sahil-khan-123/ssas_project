@@ -79,8 +79,14 @@
             "name": "Date",
             "dataType": "dateTime",
             "sourceColumn": "Date",
-            "formatString": "General Date",
-            "sourceProviderType": "DBDate"
+            "formatString": "dd MMMM yyyy",
+            "sourceProviderType": "DBDate",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeCustom\"><DateTimes><DateTime LCID=\"16393\" Group=\"LongDate\" FormatString=\"dd MMMM yyyy\" /></DateTimes></Format>"
+              }
+            ]
           },
           {
             "name": "Time In",
